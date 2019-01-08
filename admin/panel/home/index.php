@@ -79,16 +79,7 @@
                             <a href="#" class="waves-effect users"><i class="fa fa-table m-r-10" aria-hidden="true"></i>Lista e perdoruesve</a>
                         </li>
                         <li>
-                            <a href="icon-fontawesome.html" class="waves-effect"><i class="fa fa-font m-r-10" aria-hidden="true"></i>Icons</a>
-                        </li>
-                        <li>
                             <a href="#" class="waves-effect map"><i class="fa fa-bus m-r-10" aria-hidden="true"></i>Menaxho Stacionet</a>
-                        </li>
-                        <li>
-                            <a href="pages-blank.html" class="waves-effect"><i class="fa fa-columns m-r-10" aria-hidden="true"></i>Blank Page</a>
-                        </li>
-                        <li>
-                            <a href="pages-error-404.html" class="waves-effect"><i class="fa fa-info-circle m-r-10" aria-hidden="true"></i>Error 404</a>
                         </li>
                     </ul>
                 </nav>

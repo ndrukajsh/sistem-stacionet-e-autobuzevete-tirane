@@ -1,6 +1,6 @@
 <?php 
 	function connect(){
-		$dblink = mysqli_connect("localhost", "root", "", "stacione");
+		$dblink = mysqli_connect("localhost", "root", "sh1234", "stacione");
 		if (!$dblink) {
 			die("Lidhja me databazen deshtoi");
 		} 
@@ -23,4 +23,3 @@
 		$num_rows = mysqli_num_rows($res);
 		return $num_rows;
 	}
- ?>

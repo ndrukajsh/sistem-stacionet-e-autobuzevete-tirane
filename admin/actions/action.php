@@ -30,4 +30,3 @@
         $logged = TRUE;
     }
     echo $logged;
-?>

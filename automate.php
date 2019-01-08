@@ -1,5 +1,5 @@
 <?php 
-	$conn = mysqli_connect("localhost", "root", "", "stacione");
+	$conn = mysqli_connect("localhost", "root", "sh1234", "stacione");
 
 	$unazaLat = array("41.335033", "41.336003", "41.337985", "41.339878", "41.339660", "41.336591", "41.336599", "41.333046", "41.330541", "41.329558", "41.327705", "41.325159", "41.323789", "41.323028", "41.322073", "41.322317", "41.325194", "41.328211", "41.331865");
 	$un = array("19.811492", "19.817112", "19.821758", "19.825674", "19.829225", "19.831317", "19.831285", "19.833763", "19.833817", "19.831575", "19.827584", "19.824424", "19.817826", "19.812864", "19.806759", "19.805096", "19.803852", "19.802666", "19.804361");
@@ -17,20 +17,35 @@
 	// 	if(mysqli_query($conn, $sql)){
 	// 		echo "done";
 	// 	}else{
+	// 		echo "not done";
 	// 		echo mysqli_error($conn);
 	// 		break;
 	// 	}
 	// }
-	for ($i=0; $i < sizeof($unazaLat); $i++) { 
-		// $sql = "insert into `linja` (`gjer`, `gjat`, `emri`, `linja`, `user_id`) values('$unazaLat[$i]', '$un[$i]', 'emri', 'Unaza', 1)";
-		$sql = 'update linja set `linja` = "Tirana e Re" where linja = "T_R"';
+	// for ($i=0; $i < sizeof($unazaLat); $i++) { 
+	// 	// $sql = "insert into `linja` (`gjer`, `gjat`, `emri`, `linja`, `user_id`) values('$unazaLat[$i]', '$un[$i]', 'emri', 'Unaza', 1)";
+	// 	$sql = 'update linja set `linja` = "Tirana e Re" where linja = "T_R"';
+	// 	if(mysqli_query($conn, $sql)){
+	// 		echo "done";
+	// 	}else{
+	// 		echo mysqli_error($conn);
+	// 		break;
+	// 	}
+	// }
+
+	for ($i=0; $i < sizeof($unazaLat); $i++) {
+		$sql = "insert into `linja` (`gjer`, `gjat`, `emri`, `linja`, `user_id`) values('$unazaLat[$i]', '$un[$i]', 'null', 'Unaza', 1)";
+		// $sql = 'update unaza set user_id = "1" where u_id = '.$i;
 		if(mysqli_query($conn, $sql)){
 			echo "done";
 		}else{
+			echo "not done";
 			echo mysqli_error($conn);
 			break;
 		}
 	}
+
+
 	mysqli_close($conn);
 ?>
 
@@ -48,4 +63,4 @@
 <?php //endforeach; ?>
 	</table> -->
 
-	select count(*) from hotele where adresa like '_e%a'; 
+	<!-- select count(*) from hotele where adresa like '_e%a';  -->
